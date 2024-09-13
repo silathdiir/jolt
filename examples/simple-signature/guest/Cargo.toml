@@ -1,0 +1,16 @@
+[package]
+name = "simple-signature-guest"
+version = "0.1.0"
+edition = "2021"
+
+[[bin]]
+name = "guest"
+path = "./src/lib.rs"
+
+[features]
+guest = []
+
+[dependencies]
+jolt = { package = "jolt-sdk", path = "../../../jolt-sdk" }
+bn = { git = "https://github.com/paritytech/bn", package = "substrate-bn" }
+rand = "0.8.5"
